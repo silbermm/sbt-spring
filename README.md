@@ -1,5 +1,4 @@
-sbt-spring
-==========
+
 
 Using the sbt build tool to build Spring powered Applications
 
