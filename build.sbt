@@ -10,8 +10,9 @@ val hibernateVersion = "4.1.9.Final"
 
 seq(webSettings :_*)
 
-libraryDependencies ++= Seq(
-	"org.mortbay.jetty" % "jetty" % "6.1.22" % "container",
+libraryDependencies ++= Seq(	
+	"org.eclipse.jetty" % "jetty-webapp" % "8.0.1.v20110908" % "container",
+	"org.apache.tomcat" % "jasper" % "6.0.37" % "container",
 	"javax.servlet" % "javax.servlet-api" % "3.0.1" % "provided",
 	"javax.servlet" % "jstl" % "1.1.2",
 	"taglibs" % "standard" % "1.1.2",
@@ -35,6 +36,7 @@ libraryDependencies ++= Seq(
 	"ch.qos.logback" % "logback-classic" % "0.9.18",
 	"ch.qos.logback" % "logback-core" % "0.9.18",
 	"org.slf4j" % "slf4j-api" % "1.5.8",
-	"org.slf4j" % "jcl-over-slf4j" % "1.5.8"
+	"org.slf4j" % "jcl-over-slf4j" % "1.5.8",
+	"hsqldb" % "hsqldb" % "1.8.0.10"
 )
 
