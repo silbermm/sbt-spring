@@ -20,7 +20,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
 @EnableTransactionManagement
-@ComponentScan(basePackages = {"config", "controllers"})
+@ComponentScan(basePackages = {"config", "controllers","sControllers","sModels"})
 @Configuration
 public class WebAppConfig extends WebMvcConfigurerAdapter {
 	
@@ -33,13 +33,13 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/resources/**").addResourceLocations("/WEB-INF/resources/");
+        registry.addResourceHandler("/assets/**").addResourceLocations("/WEB-INF/assets/");
     }
     
     @Bean
     public MessageSource getMessageSource() {
         ReloadableResourceBundleMessageSource msg = new ReloadableResourceBundleMessageSource();
-        msg.setBasename("/WEB-INF/messages/messages");
+        msg.setBasename("messages");
         msg.setCacheSeconds(0);
         return msg;
     }
